@@ -16,12 +16,12 @@ class SearchBar extends React.Component {
         return (
             <div className="ui segment" style={{ width: '70%', border: 'hidden', height: '4.8em' }} >
                 <form className="ui form" onSubmit={this.onsubmitS }>
-                    <div class="two fields">
-                        <div class="one wide field" onClick={this.onsubmitS}
+                    <div className="two fields">
+                        <div className="one wide field" onClick={this.onsubmitS}
                             style={{ position: 'relative', top: '0.2em' }}>
-                            <i class="search large icon"></i>
+                            <i className="search large icon"></i>
                         </div>
-                        <div class="fifteen wide field">
+                        <div className="fifteen wide field">
                             <input
                                 type="text"
                                 placeholder="Buscar imágenes relacionadas"

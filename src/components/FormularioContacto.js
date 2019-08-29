@@ -76,7 +76,7 @@ class ContactoForm extends React.Component {
                     </Sidebar>
                     <Sidebar.Pusher>
                         <Segment basic>
-                            <div style={{ 'padding-left': '30%' }}>
+                            <div style={{ paddingLeft: '30%' }}>
                                 <Form error={this.state.formError} style={{ width: '50%' }}>
                                     <h2>Formulario de contacto</h2>
                                     <Form.Input label='¿Como te llamas?' fluid placeholder='Escribe como te gustaría que te llamemos'

@@ -12,23 +12,21 @@ class ImagePrev extends React.Component {
         let tagsImage = null;
         let fechaCreate = null;
 
-        if (this.props.row  && this.props.row.element && this.props.row.element.tags.length > 0)  {
+        if (this.props.row && this.props.row.element && this.props.row.element.tags.length > 0) {
             tagsImage = <div className="ui segemnt">
                 <h4>Tags</h4>
-                <div>
-                        {this.props.row.element.tags
-                        .map(t => <span>{t.title}</span>)
-                        .reduce((prev, curr) => [prev, ', ', curr])}
-                </div>
+                {this.props.row.element.tags
+                    .map(t => <span key={t}>{t.title}</span>)
+                    .reduce((prev, curr) => [prev, ', ', curr])}
             </div>
-                fechaCreate = <div className="ui segemnt">
+            fechaCreate = <div className="ui segemnt">
                 <h4>Fecha</h4>
                 {this.props.row.element.created_at}
             </div>
         }
         return (
             <div>
-                <Image src={this.props.row  && this.props.row.element ? this.props.row.element.urls.regular : "http://www.gersal.com/assets/images/image-not-found.png"} />
+                <Image src={this.props.row && this.props.row.element ? this.props.row.element.urls.regular : "http://www.gersal.com/assets/images/image-not-found.png"} />
                 {tagsImage}
                 <br></br>
                 {fechaCreate}
@@ -39,9 +37,9 @@ class ImagePrev extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-            menu: state.consulta.menu,
-            busqueda: state.consulta.busqueda,
-            row: state.consulta.row,
+        menu: state.consulta.menu,
+        busqueda: state.consulta.busqueda,
+        row: state.consulta.row,
     };
 };
 
